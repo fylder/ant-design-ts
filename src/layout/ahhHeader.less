@@ -1,3 +1,5 @@
+@import '~antd/lib/style/themes/default.less';
+@pro-header-hover-bg: rgba(0, 0, 0, 0.025);
 .header {
     height: 64px;
     padding: 0 12px 0 0;
@@ -41,7 +43,6 @@ i.trigger {
 .right {
     float: right;
     height: 100%;
-    margin-right: 2rem;
     .action {
         cursor: pointer;
         padding: 0 12px;
@@ -51,6 +52,13 @@ i.trigger {
         >i {
             font-size: 18px;
             vertical-align: middle;
+            color: @text-color;
+        }
+        &:hover {
+            background: @pro-header-hover-bg;
+        }
+        :global(&.ant-popover-open) {
+            background: @pro-header-hover-bg;
         }
     }
     .search {
@@ -61,8 +69,8 @@ i.trigger {
     }
     .account {
         .avatar {
-            color: rgb(66, 148, 216);
             margin: 20px 8px 20px 0;
+            color: @primary-color;
             background: rgba(255, 255, 255, 0.85);
             vertical-align: middle;
         }

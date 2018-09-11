@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Layout, Row, Col, Avatar, Tooltip, Icon, Dropdown, Spin, Menu } from 'antd';
 // import { FormattedMessage } from 'umi/locale';
-import './ahhHeader.scss';
+import './ahhHeader.less';
 
 const { Header } = Layout;
 const menu = (

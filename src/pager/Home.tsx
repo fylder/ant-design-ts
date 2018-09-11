@@ -1,20 +1,16 @@
 import * as React from 'react';
-import { Button } from 'antd';
 
-class Home extends React.Component {
+import AhhTable from '../component/table/AhhTable';
+class Home extends React.Component<any, any> {
 
-    constructor(props: {}) {
+    constructor(props: any) {
         super(props)
     }
 
     public render() {
-        return (
-            <Button>
-                123
-            </Button>
+        return (<AhhTable />
         )
     }
-
 }
 
 export default Home

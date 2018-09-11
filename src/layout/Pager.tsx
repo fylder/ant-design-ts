@@ -23,7 +23,7 @@ class Pager extends React.Component {
                 <Layout style={{ marginLeft: 200, minHeight: '100vh' }}>
                     <AhhHeader />
                     <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-                        <Redirect to="/home" />
+                        <Redirect to="/about" />
                         {renderRoutes([
                             {
                                 component: () => (<Home />),

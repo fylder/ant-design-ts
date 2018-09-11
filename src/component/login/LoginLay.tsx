@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import { FormComponentProps } from 'antd/lib/form';
 const FormItem = Form.Item;
-import './login.scss';
+import './ahhlogin.less';
 
 interface ILoginFormProps extends FormComponentProps {
     age: number;
