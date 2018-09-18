@@ -9,6 +9,9 @@
     "no-console": false,
     "object-literal-sort-keys": false
   },
+  "jsRules": {
+    "object-literal-sort-keys": false //Disable for javascript
+  },
   "linterOptions": {
     "exclude": [
       "config/**/*.js",

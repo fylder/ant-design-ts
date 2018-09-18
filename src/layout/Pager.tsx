@@ -8,6 +8,7 @@ import AhhSider from './AhhSider';
 import Home from './../pager/Home';
 import Ahh from './../pager/Ahh';
 import About from './../pager/About';
+import Charts from './../pager/Charts';
 
 const { Content } = Layout;
 class Pager extends React.Component {
@@ -33,6 +34,10 @@ class Pager extends React.Component {
                             {
                                 component: () => (<Ahh />),
                                 path: "/ahh",
+                            },
+                            {
+                                component: () => (<Charts />),
+                                path: "/charts",
                             },
                             {
                                 component: () => (<About />),

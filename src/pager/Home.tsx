@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import AhhTable from '../component/table/AhhTable';
+
 class Home extends React.Component<any, any> {
 
     constructor(props: any) {
@@ -8,7 +9,10 @@ class Home extends React.Component<any, any> {
     }
 
     public render() {
-        return (<AhhTable />
+        return (
+            <div>
+                <AhhTable />
+            </div>
         )
     }
 }

@@ -37,6 +37,10 @@ class AhhSider extends React.Component {
                                 <span className="nav-text">Ahh</span>
                             </Link></Menu.Item>
                         <Menu.Item key="3">
+                            <Link to="/charts">
+                                <span className="nav-text">Charts</span>
+                            </Link></Menu.Item>
+                        <Menu.Item key="4">
                             <Link to="/about">
                                 <span className="nav-text">About</span>
                             </Link>
