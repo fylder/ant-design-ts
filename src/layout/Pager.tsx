@@ -9,6 +9,7 @@ import Home from './../pager/Home';
 import Ahh from './../pager/Ahh';
 import About from './../pager/About';
 import Charts from './../pager/Charts';
+import Photos from './../pager/Photos';
 
 const { Content } = Layout;
 class Pager extends React.Component {
@@ -38,6 +39,10 @@ class Pager extends React.Component {
                             {
                                 component: () => (<Charts />),
                                 path: "/charts",
+                            },
+                            {
+                                component: () => (<Photos />),
+                                path: "/photo",
                             },
                             {
                                 component: () => (<About />),
