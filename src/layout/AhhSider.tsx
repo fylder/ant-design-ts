@@ -26,7 +26,7 @@ class AhhSider extends React.Component {
                             <h1>Ant Design Pro</h1>
                         </Link>
                     </div>
-                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['5']} style={{ padding: '16px 0', width: '100%' }}>
+                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['6']} style={{ padding: '16px 0', width: '100%' }}>
                         <Menu.Item key="1" >
                             <Link to="/home">
                                 <span className="nav-text">Home</span>
@@ -45,6 +45,10 @@ class AhhSider extends React.Component {
                                 <span className="nav-text">Photo</span>
                             </Link></Menu.Item>
                         <Menu.Item key="5">
+                            <Link to="/index">
+                                <span className="nav-text">Index</span>
+                            </Link></Menu.Item>
+                        <Menu.Item key="6">
                             <Link to="/about">
                                 <span className="nav-text">About</span>
                             </Link>

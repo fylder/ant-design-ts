@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Layout } from 'antd';
+import { Layout, BackTop } from 'antd';
 import { Redirect } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import AhhHeader from './AhhHeader';
@@ -10,6 +10,7 @@ import Ahh from './../pager/Ahh';
 import About from './../pager/About';
 import Charts from './../pager/Charts';
 import Photos from './../pager/Photos';
+import Banners from './../pager/Banners';
 
 const { Content } = Layout;
 class Pager extends React.Component {
@@ -22,7 +23,10 @@ class Pager extends React.Component {
         return (
             <Layout>
                 <AhhSider />
-                <Layout style={{ marginLeft: 200, minHeight: '100vh' }}>
+                <Layout style={{ marginLeft: 200, minHeight: '100vh' }} className='components-back-top-demo-custom'>
+                    <BackTop>
+                        <div className="ant-back-top-inner">UP</div>
+                    </BackTop>
                     <AhhHeader />
                     <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
                         <Redirect to="/about" />
@@ -43,6 +47,10 @@ class Pager extends React.Component {
                             {
                                 component: () => (<Photos />),
                                 path: "/photo",
+                            },
+                            {
+                                component: () => (<Banners />),
+                                path: "/index",
                             },
                             {
                                 component: () => (<About />),

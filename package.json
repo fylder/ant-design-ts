@@ -11,6 +11,7 @@
   "dependencies": {
     "@antv/data-set": "^0.9.6",
     "antd": "^3.9.1",
+    "rc-banner-anim": "^2.0.8",
     "rc-queue-anim": "^1.6.5",
     "rc-tween-one": "^2.2.7",
     "react": "^16.5.0",

@@ -7382,6 +7382,16 @@ rc-animate@^3.0.0-rc.1, rc-animate@^3.0.0-rc.4, rc-animate@^3.0.0-rc.5:
     rc-util "^4.5.0"
     react-lifecycles-compat "^3.0.4"
 
+rc-banner-anim@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/rc-banner-anim/-/rc-banner-anim-2.0.8.tgz#7f592f597e1085552fc6d012fcc89510cd574e98"
+  dependencies:
+    babel-runtime "6.x"
+    prop-types "^15.5.0"
+    rc-tween-one "^2.2.4"
+    style-utils "~0.1.13"
+    tween-functions "1.x"
+
 rc-calendar@~9.7.3:
   version "9.7.6"
   resolved "http://registry.npm.taobao.org/rc-calendar/download/rc-calendar-9.7.6.tgz#df53e5afb123e352ba7fcb160c01173599072af1"
@@ -7702,7 +7712,7 @@ rc-trigger@^3.0.0-rc.2:
     rc-animate "^3.0.0-rc.1"
     rc-util "^4.4.0"
 
-rc-tween-one@^2.0.3, rc-tween-one@^2.2.7:
+rc-tween-one@^2.0.3, rc-tween-one@^2.2.4, rc-tween-one@^2.2.7:
   version "2.2.7"
   resolved "https://registry.yarnpkg.com/rc-tween-one/-/rc-tween-one-2.2.7.tgz#acd5c01efb6081e7970bdabbeea65cf4c8cd447c"
   dependencies:
@@ -9446,7 +9456,7 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tween-functions@~1.2.0:
+tween-functions@1.x, tween-functions@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/tween-functions/-/tween-functions-1.2.0.tgz#1ae3a50e7c60bb3def774eac707acbca73bbc3ff"
 
