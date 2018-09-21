@@ -1,6 +1,6 @@
-import { Chart, Tooltip, Axis, Legend, SmoothLine, Point } from 'viser-react';
-import * as React from 'react';
-const DataSet = require('@antv/data-set');
+import { Chart, Tooltip, Axis, Legend, SmoothLine, Point } from 'viser-react'
+import * as React from 'react'
+const DataSet = require('@antv/data-set')
 
 const sourceData = [
     { month: 'Jan', Tokyo: 7.0, London: 3.9 },
@@ -15,23 +15,25 @@ const sourceData = [
     { month: 'Oct', Tokyo: 18.3, London: 10.3 },
     { month: 'Nov', Tokyo: 13.9, London: 6.6 },
     { month: 'Dec', Tokyo: 9.6, London: 4.8 },
-];
+]
 
-const dv = new DataSet.View().source(sourceData);
+const dv = new DataSet.View().source(sourceData)
 dv.transform({
     type: 'fold',
     fields: ['Tokyo', 'London'],
     key: 'city',
     value: 'temperature',
-});
-const data = dv.rows;
+})
+const data = dv.rows
 // const data={}
 
-const scale = [{
-    dataKey: 'month',
-    min: 0,
-    max: 1,
-}];
+const scale = [
+    {
+        dataKey: 'month',
+        min: 0,
+        max: 1,
+    },
+]
 
 class AhhLine extends React.Component {
     render() {
@@ -43,7 +45,7 @@ class AhhLine extends React.Component {
                 <SmoothLine position="month*temperature" color="city" />
                 <Point position="month*temperature" color="city" shape="circle" />
             </Chart>
-        );
+        )
     }
 }
 

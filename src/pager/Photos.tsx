@@ -1,9 +1,8 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import Photo from '../component/photo/Photo';
+import Photo from '../component/photo/Photo'
 
 class Photos extends React.Component<any, any> {
-
     constructor(props: any) {
         super(props)
     }

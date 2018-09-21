@@ -1,16 +1,15 @@
-import * as React from 'react';
-import Banner from './../component/banner/Banner';
-import Banner2 from '../component/banner/Banner2';
+import * as React from 'react'
+import Banner from './../component/banner/Banner'
+import Banner2 from '../component/banner/Banner2'
 
 class Banners extends React.Component<any, any> {
-
     constructor(props: any) {
         super(props)
     }
 
     public render() {
         return (
-            <div >
+            <div>
                 <Banner />
                 <Banner2 />
             </div>

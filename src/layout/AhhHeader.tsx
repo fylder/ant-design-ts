@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { Layout, Row, Col, Avatar, Tooltip, Icon, Dropdown, Spin, Menu } from 'antd';
+import { Layout, Row, Col, Avatar, Tooltip, Icon, Dropdown, Spin, Menu } from 'antd'
 // import { FormattedMessage } from 'umi/locale';
-import './ahhHeader.less';
+import './ahhHeader.less'
 
-const { Header } = Layout;
+const { Header } = Layout
 const menu = (
-    <Menu className='menu' selectedKeys={[]}>
+    <Menu className="menu" selectedKeys={[]}>
         <Menu.Item key="userCenter">
             <Icon type="user" />
             个人中心
@@ -25,16 +25,16 @@ const menu = (
         <Menu.Item key="logout">
             <Icon type="logout" />
             退出登录
-      </Menu.Item>
+        </Menu.Item>
     </Menu>
-);
+)
 
 class AhhHeader extends React.Component {
     public state = {
         currentUser: {
-            name: "fylder",
-            avatar: "https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png",
-        }
+            name: 'fylder',
+            avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
+        },
     }
     constructor(props: any) {
         super(props)
@@ -42,16 +42,16 @@ class AhhHeader extends React.Component {
 
     public render() {
         return (
-            <Header style={{ background: '#fff', padding: 0 }} >
+            <Header style={{ background: '#fff', padding: 0 }}>
                 <Row type="flex" justify="end">
                     <Col span={4}>
-                        <div className='right'>
+                        <div className="right">
                             <Tooltip title="使用文档">
                                 <a
                                     target="_blank"
                                     href="https://pro.ant.design/docs/getting-started"
                                     rel="noopener noreferrer"
-                                    className='action'
+                                    className="action"
                                     title="使用文档"
                                 >
                                     <Icon type="question-circle-o" />
@@ -59,26 +59,25 @@ class AhhHeader extends React.Component {
                             </Tooltip>
                             {this.state.currentUser.name ? (
                                 <Dropdown overlay={menu}>
-                                    <span className='action account'>
+                                    <span className="action account">
                                         <Avatar
-                                            className='avatar'
+                                            className="avatar"
                                             size="small"
                                             src={this.state.currentUser.avatar}
                                             alt="avatar"
                                         />
-                                        <span className='name'>{this.state.currentUser.name}</span>
+                                        <span className="name">{this.state.currentUser.name}</span>
                                     </span>
                                 </Dropdown>
                             ) : (
-                                    <Spin size="small" style={{ marginLeft: 8, marginRight: 8 }} />
-                                )}
+                                <Spin size="small" style={{ marginLeft: 8, marginRight: 8 }} />
+                            )}
                         </div>
                     </Col>
                 </Row>
-
             </Header>
         )
     }
 }
 
-export default AhhHeader;
+export default AhhHeader

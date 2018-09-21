@@ -1,88 +1,89 @@
 // use jsx to render html, do not modify simple.html
 
-import BannerAnim from 'rc-banner-anim';
-import QueueAnim from 'rc-queue-anim';
-import TweenOne, { TweenOneGroup } from 'rc-tween-one';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.less';
-import './arrow.less';
-import './index.2.less';
+import BannerAnim from 'rc-banner-anim'
+import QueueAnim from 'rc-queue-anim'
+import TweenOne, { TweenOneGroup } from 'rc-tween-one'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.less'
+import './arrow.less'
+import './index.2.less'
 
-const { Element, Arrow } = BannerAnim;
-const BgElement = Element.BgElement;
+const { Element, Arrow } = BannerAnim
+const BgElement = Element.BgElement
 class Banner2 extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.imgArray = [
             'https://zos.alipayobjects.com/rmsportal/hzPBTkqtFpLlWCi.jpg',
             'https://zos.alipayobjects.com/rmsportal/gGlUMYGEIvjDOOw.jpg',
-        ];
+        ]
         this.state = {
             intShow: 0,
             prevEnter: false,
             nextEnter: false,
-        };
+        }
     }
 
     onChange = (type, int) => {
         if (type === 'before') {
             this.setState({
                 intShow: int,
-            });
+            })
         }
     }
 
     getNextPrevNumber = () => {
-        let nextInt = this.state.intShow + 1;
-        let prevInt = this.state.intShow - 1;
+        let nextInt = this.state.intShow + 1
+        let prevInt = this.state.intShow - 1
         if (nextInt >= this.imgArray.length) {
-            nextInt = 0;
+            nextInt = 0
         }
         if (prevInt < 0) {
-            prevInt = this.imgArray.length - 1;
+            prevInt = this.imgArray.length - 1
         }
 
-        return [prevInt, nextInt];
+        return [prevInt, nextInt]
     }
 
     prevEnter = () => {
         this.setState({
             prevEnter: true,
-        });
+        })
     }
 
     prevLeave = () => {
         this.setState({
             prevEnter: false,
-        });
+        })
     }
 
     nextEnter = () => {
         this.setState({
             nextEnter: true,
-        });
+        })
     }
 
     nextLeave = () => {
         this.setState({
             nextEnter: false,
-        });
+        })
     }
 
     render() {
-        const intArray = this.getNextPrevNumber();
+        const intArray = this.getNextPrevNumber()
         return (
-            <BannerAnim onChange={this.onChange}
+            <BannerAnim
+                onChange={this.onChange}
                 autoPlay
                 duration={2000}
                 ease="easeInOutExpo"
                 sync
-                ref={(c) => { this.banner = c; }}
+                ref={c => {
+                    this.banner = c
+                }}
             >
-                <Element key="aaa"
-                    prefixCls="banner-user-elem"
-                >
+                <Element key="aaa" prefixCls="banner-user-elem">
                     <BgElement
                         key="bg"
                         className="bg"
@@ -92,21 +93,25 @@ class Banner2 extends React.Component {
                             backgroundPosition: 'center',
                         }}
                     />
-                    <QueueAnim key="1" name="QueueAnim" className='text-wrapper'>
+                    <QueueAnim key="1" name="QueueAnim" className="text-wrapper">
                         <h1 key="h1">Ant Motion Demo</h1>
                         <p key="p">Ant Motion Demo.Ant Motion Demo.Ant Motion Demo.Ant Motion Demo</p>
                     </QueueAnim>
                     <TweenOne
-                        animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }}
+                        animation={{
+                            y: 50,
+                            opacity: 0,
+                            type: 'from',
+                            delay: 200,
+                        }}
                         key="2"
-                        name="TweenOne" className='text-wrapper'
+                        name="TweenOne"
+                        className="text-wrapper"
                     >
                         Ant Motion Demo.Ant Motion Demo
-          </TweenOne>
+                    </TweenOne>
                 </Element>
-                <Element key="bbb"
-                    prefixCls="banner-user-elem"
-                >
+                <Element key="bbb" prefixCls="banner-user-elem">
                     <BgElement
                         key="bg"
                         className="bg"
@@ -116,50 +121,75 @@ class Banner2 extends React.Component {
                             backgroundPosition: 'center',
                         }}
                     />
-                    <QueueAnim key="1" name="QueueAnim" className='text-wrapper'>
+                    <QueueAnim key="1" name="QueueAnim" className="text-wrapper">
                         <h1 key="h1">Ant Motion Demo</h1>
                         <p key="p">Ant Motion Demo.Ant Motion Demo.Ant Motion Demo.Ant Motion Demo</p>
                     </QueueAnim>
                     <TweenOne
-                        animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }}
+                        animation={{
+                            y: 50,
+                            opacity: 0,
+                            type: 'from',
+                            delay: 200,
+                        }}
                         key="2"
-                        name="TweenOne" className='text-wrapper'
+                        name="TweenOne"
+                        className="text-wrapper"
                     >
                         Ant Motion Demo.Ant Motion Demo
-          </TweenOne>
+                    </TweenOne>
                 </Element>
-                <Arrow arrowType="prev" key="prev" prefixCls="user-arrow" component={TweenOne}
+                <Arrow
+                    arrowType="prev"
+                    key="prev"
+                    prefixCls="user-arrow"
+                    component={TweenOne}
                     onMouseEnter={this.prevEnter}
                     onMouseLeave={this.prevLeave}
                     animation={{ left: this.state.prevEnter ? 0 : -120 }}
                 >
                     <div className="arrow" />
-                    <TweenOneGroup enter={{ opacity: 0, type: 'from' }} leave={{ opacity: 0 }}
-                        appear={false} className="img-wrapper" component="ul"
+                    <TweenOneGroup
+                        enter={{ opacity: 0, type: 'from' }}
+                        leave={{ opacity: 0 }}
+                        appear={false}
+                        className="img-wrapper"
+                        component="ul"
                     >
                         <li
-                            style={{ backgroundImage: `url(${this.imgArray[intArray[0]]})` }}
+                            style={{
+                                backgroundImage: `url(${this.imgArray[intArray[0]]})`,
+                            }}
                             key={intArray[0]}
                         />
                     </TweenOneGroup>
                 </Arrow>
-                <Arrow arrowType="next" key="next" prefixCls="user-arrow" component={TweenOne}
+                <Arrow
+                    arrowType="next"
+                    key="next"
+                    prefixCls="user-arrow"
+                    component={TweenOne}
                     onMouseEnter={this.nextEnter}
                     onMouseLeave={this.nextLeave}
                     animation={{ right: this.state.nextEnter ? 0 : -120 }}
                 >
                     <div className="arrow" />
-                    <TweenOneGroup enter={{ opacity: 0, type: 'from', delay: 200 }} leave={{ opacity: 0 }}
-                        className="img-wrapper" component="ul"
+                    <TweenOneGroup
+                        enter={{ opacity: 0, type: 'from', delay: 200 }}
+                        leave={{ opacity: 0 }}
+                        className="img-wrapper"
+                        component="ul"
                     >
                         <li
-                            style={{ backgroundImage: `url(${this.imgArray[intArray[1]]})` }}
+                            style={{
+                                backgroundImage: `url(${this.imgArray[intArray[1]]})`,
+                            }}
                             key={intArray[1]}
                         />
                     </TweenOneGroup>
                 </Arrow>
             </BannerAnim>
-        );
+        )
     }
 }
 export default Banner2
