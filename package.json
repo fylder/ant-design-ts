@@ -14,7 +14,7 @@
     "antd": "^3.9.1",
     "https-proxy-agent": "^5.0.0",
     "kind-of": "^6.0.3",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "rc-banner-anim": "^2.0.8",
     "rc-queue-anim": "^1.6.5",
     "rc-tween-one": "^2.2.7",
