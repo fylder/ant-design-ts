@@ -8448,7 +8448,7 @@ rmc-feedback@^2.0.0:
 
 rollup@^0.25.8:
   version "0.25.8"
-  resolved "http://registry.npmjs.org/rollup/-/rollup-0.25.8.tgz#bf6ce83b87510d163446eeaa577ed6a6fc5835e0"
+  resolved "https://registry.npmjs.org/rollup/-/rollup-0.25.8.tgz#bf6ce83b87510d163446eeaa577ed6a6fc5835e0"
   dependencies:
     chalk "^1.1.1"
     minimist "^1.2.0"
@@ -9532,8 +9532,9 @@ typescript@^3.0.3:
   resolved "http://registry.npm.taobao.org/typescript/download/typescript-3.0.3.tgz#4853b3e275ecdaa27f78fda46dc273a7eb7fc1c8"
 
 ua-parser-js@^0.7.18:
-  version "0.7.18"
-  resolved "http://registry.npm.taobao.org/ua-parser-js/download/ua-parser-js-0.7.18.tgz#a7bfd92f56edfb117083b69e31d2aa8882d4b1ed"
+  version "0.7.33"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.33.tgz#1d04acb4ccef9293df6f70f2c3d22f3030d8b532"
+  integrity sha512-s8ax/CeZdK9R/56Sui0WM6y9OFREJarMRHqLB2EwkovemBxNQ+Bqu8GAsUnVcXKgphb++ghr/B2BZx4mahujPw==
 
 uglify-es@^3.3.4:
   version "3.3.9"
